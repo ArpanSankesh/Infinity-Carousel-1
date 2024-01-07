@@ -60,3 +60,26 @@ body {
     transform: translateX(-100%);
   }
 }
+
+@media (max-width:1000px) {
+  .container::after,
+.container::before{
+  width: 200px;
+}
+}
+@media (max-width:550px) {
+  .container::after,
+.container::before{
+  width: 150px;
+}
+}
+@media (max-width:400px) {
+  .container::after,
+.container::before{
+  width: 100px;
+}
+.logo-slider img{
+  height: 40px;
+  margin: 0 30px;
+}
+}
