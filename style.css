@@ -17,11 +17,34 @@ body {
   background-color: #fff;
   padding: 60px 0;
   white-space: nowrap;
+  position: relative;
 }
+.container::after,
+.container::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 1;
+}
+.container::before{
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #fff);
+}
+.container::after{
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+}
+
 .logo-slider {
   overflow: hidden;
-  animation: 10s slide infinite linear;
+  animation: 20s slide infinite linear;
   display: inline-block;
+}
+
+.container:hover .logo-slider{
+  animation-play-state:paused ;
 }
 
 .logo-slider img {
